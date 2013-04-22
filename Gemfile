@@ -4,7 +4,7 @@ gem 'rails', '3.2.12'
 gem 'simple_form'
 gem 'jquery-rails'
 
-group :production do
+group :development do
 	gem 'sqlite3'
 end
 
