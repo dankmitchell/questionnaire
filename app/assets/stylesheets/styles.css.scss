@@ -1,6 +1,5 @@
-// Place all the styles related to the forms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+@import "bootstrap-responsive";
 
 html {
     position: relative;
@@ -15,8 +14,10 @@ footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 100px;
     width: 100%;
+    background: #000000;
+    color: #ffffff;
+    padding: 10px;
 }
 
 .flash {

@@ -1,5 +1,9 @@
-<h1><%= @form.name %></h1>
-<p><%= @form.name %></p>
+<h1>User name:<%= @form.name %></h1>
+<p><strong>User email:</strong> <%= @form.email %></p>
+<p><strong>Comment:</strong> <%= simple_format @form.comment %></p>
+<p><strong>Rating:</strong> <%= @form.rating %></p>
+<% if @form.would_recommend %>
+<p><strong>Recommended</strong></p>
+<% end %>
 <p><%= link_to "Edit", edit_form_path(@form) %></p>
 <p><%= link_to "Delete", form_path(@form), method: :delete, confirm: "Are you sure?" %></p>
-<p><%= link_to "All responses", forms_path %></p>

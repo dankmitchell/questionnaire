@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Questionnaire</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Questionnaire</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%= stylesheet_link_tag "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-<header>
-	<h1>Wufoo!</h1>
-</header>
-
-<%if flash.any? %>
-	<div class="flash"><%= flash[:success] %></div>
-<% end %>
-
-<%= yield %>
-
-<footer>
-	&copy; 2013
-</footer>
+	<header class="navbar">
+		<div class="navbar-inner">
+		<a class="brand" href="/forms">Wufoo</a>
+		<ul class="nav">
+      <li class="active"><%= link_to "All responses", forms_path %></li>
+      <li><%= link_to "New response", new_form_path %></li>
+    </ul>
+	</div>
+	</header>
+	<div id="main" role="main">
+		<div class="container">
+			<div class="content">
+				<div class="row-fluid">
+					<div class="span12">
+						<% if flash.any? %>
+						<div class="alert"><%= flash[:success] %>
+							<a class="close" data-dismiss="alert">&#215;</a>
+						</div>
+						<% end %>
+						<%= yield %>
+					</div>
+				</div>
+				<footer>
+				</footer>
+			</div>
+		</div> <!--! end of .container -->
+	</div> <!--! end of #main -->
 
 </body>
 </html>

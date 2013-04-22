@@ -53,7 +53,7 @@ class FormsController < ApplicationController
   def update
     @form = Form.find params[:id]
     if @form.update_attributes(params[:form])
-      flash[:success] = "You have sucessfully edited #{form}!"
+      flash[:success] = "You have sucessfully edited #{@form.name}!"
       redirect_to form_path(@form)
     else
       render "edit"
@@ -64,7 +64,7 @@ class FormsController < ApplicationController
     @form = Form.find params[:id]
     @form.destroy
       if @form.destroy
-      flash[:success] = "You have sucessfully deleted the reponse!"
+      flash[:success] = "You have sucessfully deleted the #{@form.name}!"
       end
     redirect_to forms_path
   end
