@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
-
-gem 'sqlite3'
-
 gem 'simple_form'
+gem 'jquery-rails'
+
+group :production do
+	gem 'sqlite3'
+end
 
 group :production do
 	gem 'pg'
@@ -15,5 +17,3 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
