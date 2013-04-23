@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130422154021) do
+ActiveRecord::Schema.define(:version => 20130423080502) do
 
   create_table "forms", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20130422154021) do
     t.text     "comment"
     t.integer  "rating"
     t.boolean  "would_recommend"
+    t.text     "company"
+    t.text     "job_title"
   end
 
 end

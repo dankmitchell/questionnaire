@@ -24,7 +24,7 @@ class FormsController < ApplicationController
     @list << "Mark"
   end
 
-  @forms = Form.order("name")
+  @forms = Form.order("rating")
 
   end
 
